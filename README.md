@@ -59,22 +59,29 @@ dependencies:
 The application fetches movies from a sample API.:
 
 ```dart
-static const String _apiUrl = "https://api.example.com/movies";
+static const String _apiUrl = "https://api.themoviedb.org";
 ```
+
+### API Endpoints
+
+- **Search Movies:**
+  `GET /search/movie?api_key={api_key}&page={page}`
+
+- **Popular Movies:**
+  `GET /movie/popular?api_key={api_key}&page={page}`
 
 ### API Requirements
 
-- **Endpoint:** `GET /movies?page={page}&limit={limit}`
+- **API Key:** Replace `{api_key}` with your valid API key.
 
 - **Response Example:**
-
   ```json
   {
-    "movies": [
+    "results": [
       {
         "title": "Movie Title",
         "rating": "8.5",
-        "poster": "https://example.com/poster.jpg"
+        "poster_path": "/poster.jpg"
       }
     ]
   }
