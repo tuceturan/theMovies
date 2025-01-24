@@ -50,9 +50,10 @@ dependencies:
 
 ## File Structure
 
-- ``: Contains the main entry point and the application structure.
-- ``: Handles API calls to fetch movies.
+- **`main.dart`**: Contains the main entry point and the application structure.
+- **`MovieService`**: Handles API calls to fetch movies.
 - **UI Components:** Widgets for displaying movie cards, pagination buttons, and the search bar.
+
 
 ## API Integration
 
@@ -80,7 +81,7 @@ static const String _apiUrl = "https://api.themoviedb.org";
     "results": [
       {
         "title": "Movie Title",
-        "rating": "8.5",
+        "popularity": "8.5",
         "poster_path": "/poster.jpg"
       }
     ]
@@ -91,10 +92,6 @@ static const String _apiUrl = "https://api.themoviedb.org";
 
 - **Theme:** Modify the `primarySwatch` in `ThemeData` to change the application theme.
 
-## Known Issues
-
-- **Placeholder Data:** The API URL is a placeholder. Replace it with a functional endpoint.
-- **Ellipses in Pagination:** For better user experience, the pagination range is limited to 3 pages before and after the current page.
 
 ## Contributing
 
